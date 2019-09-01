@@ -1,0 +1,17 @@
+C:\trab\desenv\c#\Criptografia com RSA\Criptografia com RSA\bin\Release\Criptografia com RSA.exe.config
+C:\trab\desenv\c#\Criptografia com RSA\Criptografia com RSA\bin\Release\Criptografia com RSA.exe.manifest
+C:\trab\desenv\c#\Criptografia com RSA\Criptografia com RSA\bin\Release\Criptografia com RSA.application
+C:\trab\desenv\c#\Criptografia com RSA\Criptografia com RSA\bin\Release\Criptografia com RSA.exe
+C:\trab\desenv\c#\Criptografia com RSA\Criptografia com RSA\bin\Release\Criptografia com RSA.pdb
+C:\trab\desenv\c#\Criptografia com RSA\Criptografia com RSA\obj\Release\MainWindow.g.cs
+C:\trab\desenv\c#\Criptografia com RSA\Criptografia com RSA\obj\Release\App.g.cs
+C:\trab\desenv\c#\Criptografia com RSA\Criptografia com RSA\obj\Release\Criptografia com RSA_MarkupCompile.cache
+C:\trab\desenv\c#\Criptografia com RSA\Criptografia com RSA\obj\Release\Criptografia com RSA_MarkupCompile.lref
+C:\trab\desenv\c#\Criptografia com RSA\Criptografia com RSA\obj\Release\MainWindow.baml
+C:\trab\desenv\c#\Criptografia com RSA\Criptografia com RSA\obj\Release\Criptografia com RSA.g.resources
+C:\trab\desenv\c#\Criptografia com RSA\Criptografia com RSA\obj\Release\Criptografia_com_RSA.Properties.Resources.resources
+C:\trab\desenv\c#\Criptografia com RSA\Criptografia com RSA\obj\Release\Criptografia com RSA.csproj.GenerateResource.Cache
+C:\trab\desenv\c#\Criptografia com RSA\Criptografia com RSA\obj\Release\Criptografia com RSA.exe.manifest
+C:\trab\desenv\c#\Criptografia com RSA\Criptografia com RSA\obj\Release\Criptografia com RSA.application
+C:\trab\desenv\c#\Criptografia com RSA\Criptografia com RSA\obj\Release\Criptografia com RSA.exe
+C:\trab\desenv\c#\Criptografia com RSA\Criptografia com RSA\obj\Release\Criptografia com RSA.pdb

@@ -1,0 +1,41 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Properties="clr-namespace:Criptografia_com_RSA.Properties" x:Name="formPrincipal" x:Class="Criptografia_com_RSA.MainWindow"
+        Title="Criptografia assimétrica com RSA - prof. Dirceu e Angelita - Novembro/2012" Height="310" Width="783" WindowStartupLocation="CenterScreen" Icon="favicon.ico" ResizeMode="NoResize" Initialized="formPrincipal_Initialized" Loaded="formPrincipal_Loaded" Closed="formPrincipal_Closed">
+    <Grid HorizontalAlignment="Left" Height="205" VerticalAlignment="Top" Width="673" Margin="10,10,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="57*"/>
+            <RowDefinition Height="83*"/>
+            <RowDefinition Height="55*"/>
+        </Grid.RowDefinitions>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="57" Margin="480,10,-251,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="270"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="95" Margin="480,71,-77,-21" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="270" Grid.RowSpan="2"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Margin="480,3,-251,0" Stroke="Black" VerticalAlignment="Top" Width="270" Grid.RowSpan="2"/>
+        <Rectangle x:Name="Retangulo1" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="223" Margin="0,3,0,-21" Stroke="Black" VerticalAlignment="Top" Width="473" Grid.RowSpan="3"/>
+        <Button x:Name="btnGerarChavePrivada" Content="Gerar Chave Privada" Margin="205,86,0,-50" Width="129" VerticalAlignment="Top" HorizontalAlignment="Left" Panel.ZIndex="1" Click="btnGerarChavePrivada_Click" Grid.Row="2"/>
+        <Button x:Name="btnCifrar" Content="Cifrar &gt;&gt;" Margin="193,35,0,0" Width="81" HorizontalAlignment="Left" Panel.ZIndex="1" Click="btnCifrar_Click" Grid.Row="1" Height="22" VerticalAlignment="Top"/>
+        <Button x:Name="btnDecifrar" Content="&lt;&lt; Decifrar" Margin="193,72,0,0" Width="81" VerticalAlignment="Top" HorizontalAlignment="Left" Panel.ZIndex="1" Click="btnDecifrar_Click" Grid.Row="1" Grid.RowSpan="2"/>
+        <Button x:Name="btnFechar" Content="Fechar" Margin="356,86,0,-50" Width="119" VerticalAlignment="Top" HorizontalAlignment="Left" IsCancel="True" Panel.ZIndex="1" Click="btnFechar_Click" Grid.Row="2"/>
+        <Label x:Name="lblCaptionMensagemOriginal" Content="Mensagem Original" HorizontalAlignment="Left" Margin="6,8,0,0" VerticalAlignment="Top" Width="186"/>
+        <TextBox x:Name="textoOriginal" HorizontalAlignment="Left" Height="179" Margin="6,31,0,-15" TextWrapping="Wrap" VerticalAlignment="Top" Width="186" TextChanged="textoOriginal_TextChanged" Grid.RowSpan="3"/>
+        <Label x:Name="lblCaptionMensagemCifrada" Content="Mensagem Cifrada" HorizontalAlignment="Left" Margin="273,8,0,0" VerticalAlignment="Top" Width="186"/>
+        <TextBox x:Name="textoCifrado" HorizontalAlignment="Left" Height="151" Margin="277,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="186" Grid.RowSpan="3"/>
+        <Label x:Name="lblTamanhoChave" Content="Nível de segurança do RSA:" Height="29" Margin="487,7,-251,0" VerticalAlignment="Top" FontWeight="Bold" RenderTransformOrigin="4.8,1"/>
+        <Label x:Name="lblTamanhoMaximoTexto" Content="Label" HorizontalAlignment="Left" Height="29" Margin="480,10,-244,0" VerticalAlignment="Top" FontWeight="Bold" Grid.Row="1" Width="263"/>
+        <Label x:Name="lblCaptionCaminhoRepositorioChavePublica" Content="Repositório chaves públicas" HorizontalAlignment="Left" Height="26" Margin="480,68,-152,0" Grid.Row="1" VerticalAlignment="Top" Grid.RowSpan="2" FontWeight="Bold" Width="171"/>
+        <Button x:Name="btnProcurarRepositorio" Content="..." HorizontalAlignment="Left" Margin="716,0,-68,0" Grid.Row="2" Width="25" RenderTransformOrigin="0.741,3.679" Click="btnProcurarRepositorio_Click" Height="25" VerticalAlignment="Top"/>
+        <Slider x:Name="sliderTamanhoTexto" HorizontalAlignment="Left" Margin="490,39,-244,0" VerticalAlignment="Top" Width="253" Minimum="128" Maximum="1000" ValueChanged="sliderTamanhoTexto_ValueChanged" SmallChange="1" Grid.Row="1"/>
+        <TextBox x:Name="edtCaminhoRepositorio" HorizontalAlignment="Left" Height="22" Margin="488,3,-36,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="221"/>
+        <RadioButton x:Name="rdgRSA2048" Content="2048 bits" HorizontalAlignment="Left" Margin="490,36,-91,0" VerticalAlignment="Top" Width="100" IsChecked="True" GroupName="RSA" Click="rdgRSA2048_Click"/>
+        <RadioButton x:Name="rdgRSA4096" Content="4096 bits" HorizontalAlignment="Left" Margin="575,36,-176,0" VerticalAlignment="Top" Width="100" GroupName="RSA" Click="rdgRSA4096bits_Click"/>
+        <RadioButton x:Name="rdgRSA6144" Content="6144 bits" HorizontalAlignment="Left" Margin="665,36,-244,0" VerticalAlignment="Top" Width="78" GroupName="RSA" Click="rdgRSA6144bits_Click"/>
+        <Button x:Name="btnTextoCopiar" HorizontalAlignment="Left" Height="28" Margin="277,47,0,-20" Grid.Row="2" VerticalAlignment="Top" Width="43" Content="Copiar" Click="btnTextoCopiar_Click"/>
+        <Button x:Name="btnColar" Content="Colar" HorizontalAlignment="Left" Margin="320,47,0,-17" Grid.Row="2" Width="40" Height="28" Click="btnColar_Click"/>
+        <Button x:Name="btnTextoSalvar" Content="Salvar" HorizontalAlignment="Left" Margin="360,47,0,-20" Grid.Row="2" VerticalAlignment="Top" Width="38" Height="28" Click="btnTextoSalvar_Click"/>
+        <Button x:Name="btnTextoCarregar" Content="Carregar" HorizontalAlignment="Left" Margin="398,47,0,-20" Grid.Row="2" VerticalAlignment="Top" Width="65" Height="28" RenderTransformOrigin="0.2,1" Click="btnTextoCarregar_Click"/>
+        <Label x:Name="lblCaptionCaminhoRepositorioTrocaMensagem" Content="Repositório troca mensagens cifradas" HorizontalAlignment="Left" Height="26" Margin="480,26,-210,0" Grid.Row="2" VerticalAlignment="Top" FontWeight="Bold" Width="229"/>
+        <TextBox x:Name="edtCaminhoTrocaMensagem" HorizontalAlignment="Left" Height="22" Margin="488,48,-36,-12" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="221"/>
+        <Button x:Name="btnProcurarTrocaMensagem" Content="..." HorizontalAlignment="Left" Margin="716,45,-68,-12" Grid.Row="2" Width="25" RenderTransformOrigin="0.741,3.679" Click="btnProcurarTrocaMensagem_Click"/>
+    </Grid>
+</Window>
